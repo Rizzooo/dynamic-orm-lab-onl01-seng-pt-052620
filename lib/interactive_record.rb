@@ -53,7 +53,7 @@ class InteractiveRecord
   end
   
   def find_by_name(name)
-    DB[:conn].execute("SELECT * FROM #{table_name_for_insert} WHERE name = name)
+    DB[:conn].execute("SELECT * FROM #{table_name_for_insert} WHERE name = #{values_for_insert}")
   end
   
   def find_by(attribute)
